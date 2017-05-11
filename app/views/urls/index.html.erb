@@ -1,0 +1,15 @@
+<%= link_to "Shorten a URL!", new_url_path %>
+
+<table>
+	<tr>
+		<th> Original URL </th>
+		<th> Shortened URL </th>
+	</tr>
+
+	<% @urls.each do |url| %>
+		<tr>
+			<td> <%= link_to url.long_url, url_path(url) %> </td>
+			<td> <%= url.short_url %> </td>
+		</tr>
+	<% end %>
+</table>

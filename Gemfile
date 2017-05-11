@@ -21,6 +21,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'shoulda-callback-matchers'
+  gem 'capybara'
 end
 
 group :development do

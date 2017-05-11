@@ -1,0 +1,27 @@
+<% if @errors%>
+	</br>
+  <ul>
+  <% @errors.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+  </br>
+<% end %>
+</br>
+
+<%= form_for @url do |f| %>
+	<p>
+		<%= f.label "Type your URL here:" %></br>
+		<%= f.text_field :long_url %>
+	</p>
+
+	<p>
+		<%= f.submit "Shorten URL!" %>
+	</p>
+
+<% end %>
+
+<% if @short %>
+<p> Short URL: <%= @short %> </p>
+<% end %>
+<%= link_to "Back", urls_path %>
